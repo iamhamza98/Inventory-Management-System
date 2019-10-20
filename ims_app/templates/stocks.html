@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load humanize %}
+{{ price|intcomma }}
+{% block title %}Stock List{% endblock %}
+
+{% block content %}
+<!--PESCUELA, HAROLD G CpE 5 | CoE 535 - OOP PROJECT -->
+    <table class="w3-table-all w3-hoverable w3-centered w3-card-4">
+        <tr class="w3-black w3-large">
+            <th>Product</th>
+            <th>Product Price (PHP, per unit)</th>
+            <th>Available Units</th>
+        </tr>
+        {% for items in lists %}
+        <tr>
+            <td>{{ items.product_name }}</td>
+            <td>{{ items.product_price }}</td>
+            <td>{{ items.product_unit }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

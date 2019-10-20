@@ -1,0 +1,84 @@
+{% extends "admin/base.html" %}
+
+{% block title %}{{ title }} | LASORTECH ILOILO IMS{% endblock %}
+
+{% block extrastyle %}
+
+<style>
+        
+        #header{
+            background-color: #c40000;
+            color: #ffffff;
+            text-align: center;
+        }
+        #branding h1, #branding h1 a:link, #branding h1 a:visited {
+            color: #ffffff;
+            font-size: 35px;
+            font-weight: 600;
+            text-align: center;
+            
+            padding-top: 20px;
+            padding-left: 13px;
+        }
+        div.breadcrumbs{
+            background: #c40000;
+            font-size: 16px;
+        }
+        #user-tools{
+            font-weight: 500;
+            font-size: 13px;
+        }
+        td, th {
+            font-size: 15px;
+            padding: 10px;
+        }
+        .module h2, .module caption, .inline-group h2{
+
+            font-size: 15px;
+            background: #c40000;
+        }
+        #submit-btn,
+        #form-row{
+            width: 100px;
+            height: 30px;
+            text-align: center;
+            margin: auto
+        }
+        html{
+			background-image: url("../static/bg.png");
+			font-family: 'gwaponafont';
+        }
+        .login #container {
+			background: #c40000;
+			border: 0px;
+			border-radius: 20px;
+			overflow: hidden;
+			width: 28em;
+			min-width: 300px;
+			margin: 100px auto;
+			
+		}
+		body.login {
+			background: #ffffff;
+		}
+		.login .form-row label {
+			padding-right: 0.5em;
+			line-height: 2em;
+			font-size: 1em;
+			clear: both;
+			color: #fdf9f9;
+		}
+		.login #header h1 {
+			font-size: 35px;
+		}
+		li{
+			color: #808080;
+		}
+    </style>
+{% endblock %}
+
+{% block branding %}
+<h1 id="site-name"><a href="{% url 'admin:index' %}">LASORTECH ILOILO IMS ADMIN</a></h1>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}

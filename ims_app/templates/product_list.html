@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}Products List{% endblock %}
+
+{% block content %}
+
+    <table class="w3-table-all w3-hoverable w3-centered w3-card-4">
+        <tr class="w3-orange w3-large">
+            <th>Product</th>
+            <th>Group</th>
+            <th>Company</th>
+        </tr>
+        {% for items in lists %}
+        <tr>
+            <td>{{ items.product_name }}</td>
+            <td>{{ items.product_group.group_name }}</td>
+            <td>{{ items.product_company.company_name }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
